@@ -1,0 +1,38 @@
+============================================================
+RAPPORT DE VALIDATION DES DONNÉES
+============================================================
+
+📊 TIRAGES HISTORIQUES
+------------------------------------------------------------
+Nombre de tirages: 1658
+Période: 2004-02-13 00:00:00 → 2023-08-15 00:00:00
+Colonnes: Date, Draw, B1, B2, B3, B4, B5, E1, E2, Sum_Balls, Even_Count, Max_Gap, Has_13, Div_3_Count, Div_5_Count
+
+Distribution boules:
+  - Min: 1
+  - Max: 50
+  - Moyenne: 25.38
+  - Médiane: 25
+
+Sommes des boules:
+  - Min: 30
+  - Max: 223
+  - Moyenne: 126.88
+  - Écart-type: 31.97
+
+🎮 MES JEUX
+------------------------------------------------------------
+Nombre de jeux: 134
+Période: 2020-12-08 00:00:00 → 2023-08-04 00:00:00
+Investissement total: 469.00 CHF
+Jeux avec 13: 24 (17.9%)
+
+✅ VALIDATIONS
+------------------------------------------------------------
+Boules dans [1-50]: ❌ ERREUR
+Étoiles dans [1-12]: ✅ OK
+Chronologie cohérente: ✅ OK
+
+============================================================
+FIN DU RAPPORT
+============================================================

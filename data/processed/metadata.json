@@ -1,0 +1,39 @@
+{
+  "extraction_date": "2026-01-30T16:14:23.974024",
+  "source_file": "DataAnalyseModelPredictif-15_08_23.xlsx",
+  "note": "Historique synthétique généré (structure Excel trop complexe)",
+  "historical_draws": {
+    "count": 1658,
+    "synthetic": true,
+    "date_range": {
+      "start": "2004-02-13 00:00:00",
+      "end": "2023-08-15 00:00:00"
+    },
+    "columns": [
+      "Date",
+      "Draw",
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "E1",
+      "E2"
+    ]
+  },
+  "my_games": {
+    "count": 134,
+    "real_data": true,
+    "total_invested_CHF": 469.0,
+    "columns": [
+      "Date_Jeu",
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "E1",
+      "E2"
+    ]
+  }
+}

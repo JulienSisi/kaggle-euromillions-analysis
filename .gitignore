@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (keep processed, ignore large raw files if needed)
+# data/raw/*.xlsx (décommente si le fichier Excel est trop gros)
+
+# Temporary files
+*.log
+*.tmp
+.cache/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
