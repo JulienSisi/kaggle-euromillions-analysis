@@ -1,101 +1,106 @@
-# EuroMillions Analysis: Le Paradoxe du Joueur Analytique
+# EuroMillions Analysis: The Analytical Gambler's Paradox
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.13-blue.svg)
 ![Status](https://img.shields.io/badge/Status-Complete-success.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![GitHub](https://img.shields.io/github/stars/JulienSisi/kaggle-euromillions-analysis?style=social)](https://github.com/JulienSisi/kaggle-euromillions-analysis)
 
 > **TL;DR**: I analyzed 134 EuroMillions games (2020-2023) using 8 analytical methods. Result: -89.63% ROI with methods vs -89.86% random (p=0.973). Math can't beat math, but the journey demonstrates strong data analysis skills.
 
-[Badge] [Kaggle Dataset](https://www.kaggle.com/code/juliensisavath/euromillions-analysis) (coming soon)
-
-## Vue d'ensemble
-
-**Projet de démonstration** : Comment un système d'analyse sophistiqué appliqué à un jeu aléatoire peut produire des résultats intéressants... tout en confirmant l'impossibilité de prédiction.
-
-### L'histoire
-
-Entre 2020 et 2023, j'ai développé un système d'analyse multi-dimensionnelle pour EuroMillions :
-- **500+ heures** d'ingénierie analytique
-- **223 onglets Excel** de visualisations
-- **8 méthodes** d'analyse statistique
-- **133 jeux réels** testés avec argent réel
-
-**Résultat** : -285.50 CHF de perte nette, mais des compétences data science inestimables.
+[![Kaggle](https://img.shields.io/badge/Kaggle-Dataset-blue?logo=kaggle)](https://www.kaggle.com/code/juliensisavath/euromillions-analysis) (coming soon)
 
 ---
 
-## Le Paradoxe
+## Overview
 
-### Metrics Clés
-| Métrique | Valeur | Comparaison théorique |
-|----------|--------|----------------------|
-| **Mise totale** | 465.50 CHF | - |
-| **Gains totaux** | ~180 CHF | - |
-| **ROI** | -61.3% | -50% attendu |
-| **Taux de réussite** | 12% | 3-5% attendu |
-| **Rang 13** | 3.3× plus fréquent | vs aléatoire |
-| **Rang 11** | 7× plus fréquent | vs aléatoire |
-| **Jackpot (Rang 1)** | 0 | 0.000095% prob. |
+**Demonstration project**: How a sophisticated analytical system applied to a random game can produce interesting results... while confirming the impossibility of prediction.
 
-**Le paradoxe** : Gagner plus souvent, mais perdre plus d'argent.
+### The Story
+
+Between 2020 and 2023, I developed a multi-dimensional analysis system for EuroMillions:
+- **500+ hours** of analytical engineering
+- **223 Excel tabs** of visualizations
+- **8 analytical methods** (statistical analysis)
+- **134 real games** tested with real money
+
+**Result**: -285.50 CHF net loss, but invaluable data science skills.
 
 ---
 
-## Les 8 Méthodes d'Analyse
+## The Paradox
 
-### 1. Récurrence + Amplitude
-Analyse de la fréquence d'apparition sur fenêtres glissantes (7, 14, 21 tirages).
+### Key Metrics
+| Metric | Value | Theoretical Comparison |
+|--------|-------|------------------------|
+| **Total Invested** | 469.00 CHF | - |
+| **Total Won** | ~180 CHF (estimated) | - |
+| **ROI** | -61.3% | -50% expected |
+| **Win Rate** | ~12% | 3-5% expected |
+| **Rank 13** | 3.3× more frequent | vs random |
+| **Rank 11** | 7× more frequent | vs random |
+| **Jackpot (Rank 1)** | 0 | 0.000095% probability |
 
-**Formule** :
+**The paradox**: Winning more often, but losing more money.
+
+---
+
+## The 8 Analytical Methods
+
+### 1. Recurrence + Amplitude
+Frequency analysis over sliding windows (7, 14, 21 draws).
+
+**Formula**:
 ```
-Score(n) = Fréquence(n, window) × (1 - |n - Médiane(window)| / Range(window))
+Score(n) = Frequency(n, window) × (1 - |n - Median(window)| / Range(window))
 ```
 
-### 2. Validation par Somme
-Vérification des contraintes statistiques (somme totale, parité).
+### 2. Sum Validation
+Statistical constraint verification (total sum, parity).
 
 ```
-Constraint: 90 ≤ Σ(boules) ≤ 150
+Constraint: 90 ≤ Σ(balls) ≤ 150
+Target: sum ≈ 120
 ```
 
-### 3. Unicité des Combinaisons
-Anti-collision avec historique des 1000+ tirages.
+### 3. Combination Uniqueness
+Anti-collision with 1,658 historical draws.
 
-### 4. Analyse des Écarts
-Modélisation des délais entre apparitions successives.
+### 4. Gap Analysis
+Modeling delays between successive appearances.
 
 ```
-Gap(n) = Tirage_actuel - Dernier_tirage(n)
-Probabilité(n) ∝ Gap(n) si Gap(n) > Écart_moyen(n)
+Gap(n) = Current_draw - Last_draw(n)
+Probability(n) ∝ Gap(n) if Gap(n) > Average_gap(n)
 ```
 
 ### 5. Moving Averages
-Lissage temporel pour détecter tendances (MA7, MA21).
+Temporal smoothing to detect trends (MA7, MA21).
 
-### 6. Compartimentalisation
-Segmentation [1-10], [11-20], [21-30], [31-40], [41-50] avec quotas.
+### 6. Compartmentalization
+Segmentation [1-10], [11-20], [21-30], [31-40], [41-50] with quotas.
 
-### 7. Parité & Divisibilité
-Équilibrage pairs/impairs, multiples de 3, 5, 7.
+### 7. Parity & Divisibility
+Balancing even/odd, multiples of 3, 5, 7.
 
-### 8. Numéro Sacré
-Inclusion systématique du "13" (biais personnel assumé).
+### 8. Sacred Number
+Systematic inclusion of "13" (acknowledged personal bias).
+
+**Full methodology**: See [docs/methodology.md](docs/methodology.md)
 
 ---
 
 ## Installation
 
 ```bash
-# Cloner le repo
-git clone https://github.com/JulienSisi/euromillions-analysis.git
-cd euromillions-analysis
+# Clone the repo
+git clone https://github.com/JulienSisi/kaggle-euromillions-analysis.git
+cd kaggle-euromillions-analysis
 
-# Créer environnement virtuel
+# Create virtual environment
 python3 -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 
-# Installer dépendances
+# Install dependencies
 pip install -r requirements.txt
 ```
 
@@ -103,150 +108,183 @@ pip install -r requirements.txt
 
 ## Usage
 
-### 1. Préparation des données
+### 1. Data Preparation
 ```bash
-# Placer DataAnalyseModelPredictif-15_08_23.xlsx dans data/raw/
-python src/01_extract_data.py
+# Place DataAnalyseModelPredictif-15_08_23.xlsx in data/raw/
+python src/01_extract_data_custom.py
 python src/02_clean_data.py
 ```
 
-### 2. Analyse des 133 jeux réels
+### 2. Analyze 134 Real Games
 ```bash
 python src/03_analyze_games.py
 ```
 
-### 3. Tests statistiques
+### 3. Statistical Tests
 ```bash
 python src/04_statistical_tests.py
 ```
 
 ### 4. Backtesting
 ```bash
-# Génère 10,000 jeux "style Julien" vs 10,000 jeux aléatoires
+# Generates 1,000 "Julien style" games vs 1,000 random games
 python src/05_backtesting.py
 ```
 
-### 5. Visualisations
+### 5. Visualizations
 ```bash
 python src/06_visualizations.py
 # Outputs: outputs/figures/*.png
 ```
 
-### 6. Notebook interactif
+### 6. Interactive Notebook
 ```bash
-jupyter notebook notebooks/exploratory_analysis.ipynb
+jupyter notebook exploration.ipynb
 ```
 
 ---
 
-## Structure du Projet
+## Project Structure
 
 ```
-euromillions-analysis/
-├── README.md                      # Ce fichier
-├── requirements.txt               # Dépendances Python
+kaggle-euromillions-analysis/
+├── README.md                      # This file
+├── KAGGLE_README.md               # Kaggle-specific README
+├── requirements.txt               # Python dependencies
 ├── config.md                      # Configuration
-├── methodology.md                 # Documentation méthodes
+├── exploration.ipynb              # Interactive Jupyter notebook
 │
 ├── data/
 │   ├── raw/                       # DataAnalyseModelPredictif-15_08_23.xlsx
-│   └── processed/                 # CSV nettoyés (générés)
+│   └── processed/                 # Cleaned CSVs (generated)
 │
 ├── src/
-│   ├── 01_extract_data.py        # Excel → CSV
-│   ├── 02_clean_data.py          # Nettoyage
-│   ├── 03_analyze_games.py       # Analyse 133 jeux
-│   ├── 04_statistical_tests.py   # Chi2, KS test, etc.
-│   ├── 05_backtesting.py         # Simulation 10k jeux
-│   ├── 06_visualizations.py      # Graphiques
-│   └── utils.py                  # Fonctions utilitaires
-│
-├── notebooks/
-│   └── exploratory_analysis.ipynb  # Exploration interactive
+│   ├── 01_extract_data_custom.py # Excel → CSV
+│   ├── 02_clean_data.py          # Data cleaning
+│   ├── 03_analyze_games.py       # Analyze 134 games
+│   ├── 04_statistical_tests.py   # Chi-2, KS test, etc.
+│   ├── 05_backtesting.py         # Simulate 1,000 games
+│   ├── 06_visualizations.py      # Generate charts
+│   └── utils.py                  # Utility functions
 │
 ├── outputs/
-│   ├── figures/                  # PNG générés
-│   ├── reports/                  # CSV/JSON
-│   └── final_report.md           # Rapport final
+│   ├── figures/                  # Generated PNGs (5 files)
+│   ├── reports/                  # CSV/JSON results (6 files)
+│   └── final_report.md           # Complete technical report (17 pages)
 │
 └── docs/
-    ├── analysis_plan.md          # Plan d'analyse
-    └── findings.md               # Résultats
+    ├── analysis_plan.md          # 6-phase analysis plan
+    └── methodology.md            # Detailed methods documentation
 ```
 
 ---
 
-## Résultats Clés
+## Key Results
 
-### Backtesting "Style Julien" vs Aléatoire
-[À compléter après exécution de `05_backtesting.py`]
+### Backtesting: "Julien Style" vs Random
 
-**Hypothèse testée** :
-> Les méthodes analytiques maximisent-elles les petits gains au détriment des gros ?
+**Tested Hypothesis**:
+> Do analytical methods maximize small wins at the expense of big wins?
 
-### Tests Statistiques
-- **Chi-2 (uniformité)** : p-value = ?
-- **Kolmogorov-Smirnov** : D-stat = ?
-- **Corrélations temporelles** : ρ = ?
+| Metric | Julien (8 Methods) | Random | Difference |
+|--------|-------------------|--------|------------|
+| **ROI** | **-89.63%** | **-89.86%** | **+0.23%** ✅ |
+| Win Rate | 1.9% | 1.8% | +0.1% |
+| Games Simulated | 1,000 | 1,000 | - |
+| Statistical Significance | **p = 0.973** | | **NOT significant** |
 
----
+**Conclusion**: The 8 analytical methods **DO NOT outperform** random selection.
 
-## Leçons Apprennues
-
-### 1. Les tirages sont réellement aléatoires
-Aucune méthode ne surperforme l'aléatoire sur le long terme.
-
-### 2. Biais cognitifs identifiés
-- **Sunk cost fallacy** : 500h investies → difficulté d'arrêter
-- **Confirmation bias** : Mémorisation des "presque jackpots"
-- **Illusion de contrôle** : Système complexe ≠ prédictibilité
-
-### 3. Valeur transférable
-Les compétences développées sont applicables à :
-- **RegTech** : Détection d'anomalies transactionnelles
-- **FinTech** : Analyse de risque, backtesting de stratégies
-- **Pharma/Rail** : Monitoring de systèmes critiques
+### Statistical Tests
+- **Chi-2 (uniformity)**: p-value = 0.86 ✅ Uniform distribution
+- **Kolmogorov-Smirnov (normality)**: p-value = 0.80 ✅ Normal distribution
+- **Autocorrelation**: No significant lags ✅ Independent draws
 
 ---
 
-## Compétences Démontrées
+## Lessons Learned
 
-| Domaine | Compétence | Application RegTech |
-|---------|-----------|---------------------|
-| **Data Engineering** | ETL Excel → Python | Pipelines compliance |
-| **Statistiques** | Tests d'hypothèses, distributions | Détection fraude |
-| **Visualisation** | Heatmaps, séries temporelles | Dashboards réglementaires |
-| **Backtesting** | Simulation Monte Carlo | Stress testing |
-| **Pensée critique** | Reconnaissance biais | Audit qualité |
+### 1. Lottery Draws are Truly Random
+No method outperforms random selection in the long run.
+
+### 2. Cognitive Biases Identified
+- **Sunk cost fallacy**: 500h invested → difficulty stopping
+- **Confirmation bias**: Remembering "near-misses"
+- **Illusion of control**: Complex system ≠ predictability
+- **Sacred number bias**: Number 13 over-represented 1.8x
+
+### 3. Transferable Value
+The skills developed are applicable to:
+- **RegTech**: Transaction anomaly detection
+- **FinTech**: Risk analysis, strategy backtesting
+- **Pharma/Rail**: Critical systems monitoring
 
 ---
 
-## Avertissement
+## Skills Demonstrated
 
-> **Les tirages de loterie sont indépendants et aléatoires.**
+| Domain | Skill | RegTech Application |
+|--------|-------|---------------------|
+| **Data Engineering** | ETL Excel → Python | Compliance pipelines |
+| **Statistics** | Hypothesis testing, distributions | Fraud detection |
+| **Visualization** | Heatmaps, time series | Regulatory dashboards |
+| **Backtesting** | Monte Carlo simulation | Stress testing |
+| **Critical Thinking** | Bias recognition | Quality auditing |
+
+**Background**:
+- 5+ years Industrial Engineering (Alstom/Bombardier - rail diagnostics, EN50128)
+- CMMS Pharmaceutical (Oracle, GxP compliance)
+- Current: ISC Student @ HEIA-FR, transitioning to RegTech
+
+---
+
+## Visualizations
+
+Generated in `outputs/figures/`:
+
+1. **heatmap_frequency.png** - Number frequency heatmap (5×10 matrix)
+2. **sum_distribution.png** - Ball sum distribution (real vs my games)
+3. **number_frequency_comparison.png** - Frequency comparison
+4. **autocorrelation_13.png** - Independence test
+5. **backtesting_comparison.png** - Julien vs Random performance
+
+---
+
+## Documentation
+
+- **[Complete Report](outputs/final_report.md)** (17 pages): Full analysis, methodology, conclusions
+- **[Methodology](docs/methodology.md)**: Detailed explanation of 8 methods with formulas
+- **[Analysis Plan](docs/analysis_plan.md)**: 6-phase roadmap
+- **[Interactive Notebook](exploration.ipynb)**: Jupyter notebook for exploration
+
+---
+
+## Warning
+
+> **Lottery draws are independent and random.**
 >
-> Ce projet est une exploration analytique, **pas une stratégie gagnante**.
+> This project is an analytical exploration, **not a winning strategy**.
 >
-> Ne jouez jamais plus que vous ne pouvez perdre.
+> Never gamble more than you can afford to lose.
 
 ---
 
-## À Propos
+## About
 
 **Julien Sisavath**
-Étudiant ISC @ HEIA-FR | Ex-Ingénieur Ferroviaire (Alstom) | Transition vers RegTech
+ISC Student @ HEIA-FR | Ex-Railway Engineer (Alstom) | Transitioning to RegTech
 
 - GitHub: [@JulienSisi](https://github.com/JulienSisi)
 - LinkedIn: [julien-sisavath](https://www.linkedin.com/in/julien-sisavath/)
-- Portfolio: [en construction]
+- Portfolio: [under construction]
 
 ---
 
-## Licence
+## License
 
 MIT License
 
-Copyright (c) 2026 Julien Sisi
+Copyright (c) 2026 Julien Sisavath
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -270,18 +308,18 @@ SOFTWARE.
 
 ## Citation
 
-Si ce projet vous inspire :
+If this project inspires you:
 
 ```bibtex
-@misc{sisavath2025euromillions,
+@misc{sisavath2026euromillions,
   author = {Sisavath, Julien},
-  title = {EuroMillions Analysis: Le Paradoxe du Joueur Analytique},
-  year = {2025},
+  title = {EuroMillions Analysis: The Analytical Gambler's Paradox},
+  year = {2026},
   publisher = {GitHub},
-  url = {https://github.com/JulienSisi/euromillions-analysis}
+  url = {https://github.com/JulienSisi/kaggle-euromillions-analysis}
 }
 ```
 
 ---
 
-**Dernière mise à jour** : Janvier 2025
+**Last Updated**: January 2026
