@@ -2,7 +2,12 @@
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Status](https://img.shields.io/badge/Status-Complete-success.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub](https://img.shields.io/github/stars/JulienSisi/kaggle-euromillions-analysis?style=social)](https://github.com/JulienSisi/kaggle-euromillions-analysis)
+
+> **TL;DR**: I analyzed 134 EuroMillions games (2020-2023) using 8 analytical methods. Result: -89.63% ROI with methods vs -89.86% random (p=0.973). Math can't beat math, but the journey demonstrates strong data analysis skills.
+
+[Badge] [Kaggle Dataset](https://www.kaggle.com/code/juliensisavath/euromillions-analysis) (coming soon)
 
 ## Vue d'ensemble
 
@@ -239,7 +244,27 @@ Les compétences développées sont applicables à :
 
 ## Licence
 
-MIT License - Voir [LICENSE](LICENSE) pour détails.
+MIT License
+
+Copyright (c) 2026 Julien Sisi
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ---
 
