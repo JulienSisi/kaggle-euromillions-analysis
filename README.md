@@ -7,7 +7,7 @@
 
 > **TL;DR**: I analyzed 134 EuroMillions games (2020-2023) using 8 analytical methods. Result: -89.63% ROI with methods vs -89.86% random (p=0.973). Math can't beat math, but the journey demonstrates strong data analysis skills.
 
-[![Kaggle](https://img.shields.io/badge/Kaggle-Dataset-blue?logo=kaggle)](https://www.kaggle.com/code/juliensisavath/euromillions-analysis) (coming soon)
+[![Kaggle](https://img.shields.io/badge/Kaggle-Dataset-blue?logo=kaggle)](https://www.kaggle.com/datasets/juliensisavath/euromillons-analysis)
 
 ---
 
@@ -232,7 +232,7 @@ The skills developed are applicable to:
 | **Critical Thinking** | Bias recognition | Quality auditing |
 
 **Background**:
-- 5+ years Industrial Engineering (Alstom/Bombardier - rail diagnostics, EN50128)
+- 15+ years Industrial Engineering (Alstom/Bombardier - rail diagnostics, EN50128)
 - CMMS Pharmaceutical (Oracle, GxP compliance)
 - Current: ISC Student @ HEIA-FR, transitioning to RegTech
 
