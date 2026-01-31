@@ -276,7 +276,7 @@ ISC Student @ HEIA-FR | Ex-Railway Engineer (Alstom) | Transitioning to RegTech
 
 - GitHub: [@JulienSisi](https://github.com/JulienSisi)
 - LinkedIn: [julien-sisavath](https://www.linkedin.com/in/julien-sisavath/)
-- Portfolio: [under construction]
+- Portfolio: [Kaggle](https://www.kaggle.com/code/juliensisavath/euromillions-analysis)
 
 ---
 
