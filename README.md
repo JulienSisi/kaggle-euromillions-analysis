@@ -274,9 +274,10 @@ Generated in `outputs/figures/`:
 **Julien Sisavath**
 ISC Student @ HEIA-FR | Ex-Railway Engineer (Alstom) | Transitioning to RegTech
 
-- GitHub: [@JulienSisi](https://github.com/JulienSisi)
-- LinkedIn: [julien-sisavath](https://www.linkedin.com/in/julien-sisavath/)
-- Portfolio: [Kaggle](https://www.kaggle.com/code/juliensisavath/euromillions-analysis)
+- 📂 GitHub: [@JulienSisi](https://github.com/JulienSisi)
+- 💼 LinkedIn: [julien-sisavath](https://www.linkedin.com/in/julien-sisavath/)
+- 📊 **Kaggle Dataset**: [https://www.kaggle.com/datasets/juliensisavath/euromillons-analysis](https://www.kaggle.com/datasets/juliensisavath/euromillons-analysis)
+- 📓 **Kaggle Notebook**: [https://www.kaggle.com/code/juliensisavath/euromillions-analysis](https://www.kaggle.com/code/juliensisavath/euromillions-analysis)
 
 ---
 
